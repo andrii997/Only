@@ -1,0 +1,66 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<div class='main_form_login'>
+<form class='form-horizontal'>
+
+	<figure class='container_logo'>
+		<a href="/">
+      <!-- <img src="/Content/Images/ofy_logo.svg"> -->
+      <img src='ofy_logo.svg' class='logo_login' alt='OnlyFY'>
+    </a>
+	</figure>
+
+  <div class="col-sm-offset-1 col-sm-10">
+    <h3 class="LRtitle"><span class="ng-binding">Přihlášení</span></h3>
+  </div>
+
+  <div class="form-group">
+	<label for="inputEmail2" class="control-label"></label>
+  	<div class="sr-only"></div>
+    <div class="input-group col-sm-offset-2 col-sm-8">
+      <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
+      <input type="email" class="form-control" id="inputEmail2" placeholder="Email" required>
+  	</div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPassword1" class="control-label"></label>
+    <div class="sr-only"></div>
+    <div class="input-group col-sm-offset-2 col-sm-8">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
+      <input type="password" class="form-control" id="inputPassword1" placeholder="Heslo" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Pamatovat si mě
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <button type="submit" class="btn btn_sign">Přihlášení</button>
+        	<p class='reset_password'><a href='/Account/ForgotPassword' class='rememb_heslo'>Zapomenuté heslo</a>
+              <br><br>
+              <span class='register_user'>Nemáte Osobní účet OnlyFY?<a href='/Account/Register'>Registrace</a></span>
+            </p>
+    </div>
+  </div>
+  <div class="form-group">
+  </div>
+</form>
+</div>
+<footer class="verifyBottom">
+  <div class="item">© 2018 - 2019 OnlyFY.cz. All rights reserved</div>
+</footer>

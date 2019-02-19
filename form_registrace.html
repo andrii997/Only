@@ -1,0 +1,99 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<div class='main_form_login'>
+<form class='form-horizontal' id="registerForm">
+
+  <figure class='container_logo'>
+    <a href="/">
+      <!-- <img src="/Content/Images/ofy_logo.svg" class='logo_login' alt='OnlyFY'> -->
+      <img src='ofy_logo.svg' class='logo_login' alt='OnlyFY'>
+    </a>
+  </figure>
+
+  <div class="col-sm-offset-1 col-sm-10">
+    <h3 class="LRtitle"><span class="ng-binding">Registrace</span></h3>
+  </div>
+
+  <div class="form-group">
+  <label for="inputEmail1" class="control-label"></label>
+    <div class="sr-only"></div>
+    <div class="input-group col-sm-offset-2 col-sm-8">
+      <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
+      <input type="email" name="email" class="form-control" id="inputEmail1" placeholder="Email" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPassword1" class="control-label"></label>
+    <div class="sr-only"></div>
+    <div class="input-group col-sm-offset-2 col-sm-8">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
+      <input type="password" class="form-control" name="password1" id="inputPassword1" placeholder="Heslo" required minlength="4">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPassword2" class="control-label"></label>
+    <div class="sr-only"></div>
+    <div class="input-group col-sm-offset-2 col-sm-8">
+        <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
+      <input type="password" class="form-control" name="password2" id="inputPassword2" placeholder="Heslo znovu" required minlength="4">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <div class="radio">
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Muž
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Žena
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" required> Souhlasím s obchodními podmínkami
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" required> Souhlasím se zasíláním obchodních sdělení
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <button type="submit" class="btn btn_sign">Registrovat</button>
+          <p class='reset_password'>
+            <span class='login_user'>Máte registrace služby OnlyFY? <a href='/Account/Login'>Přihlášení</a></span>
+          </p>
+
+    </div>
+  </div>
+</form>
+</div>
+<footer class="verifyBottom">
+  <div class="item">© 2018 - 2019 OnlyFY.cz. All rights reserved</div>
+</footer>
