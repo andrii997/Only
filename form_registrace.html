@@ -1,9 +1,10 @@
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="node_modules/bootstrapvalidator/dist/css/bootstrapValidator.css"/>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="node_modules/bootstrapvalidator/dist/css/bootstrapValidator.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="style.css">
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -102,3 +103,38 @@
 <!-- <footer class="verifyBottom">
   <div class="item">© 2018 - 2019 OnlyFY.cz. All rights reserved</div>
 </footer> -->
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#registerForm')
+        .bootstrapValidator({
+            container: 'tooltip',
+            excluded: [':disabled'],
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+          
+        })
+        .on('status.field.bv', function(e, data) {
+            var $form     = $(e.target),
+                validator = data.bv,
+                $tabPane  = data.element.parents('.tab-pane'),
+                tabId     = $tabPane.attr('id');
+            
+            if (tabId) {
+                var $icon = $('a[href="#' + tabId + '"][data-toggle="tab"]').parent().find('i');
+
+                // Add custom class to tab containing the field
+                if (data.status == validator.STATUS_INVALID) {
+                    $icon.removeClass('fa-check').addClass('fa-times');
+                } else if (data.status == validator.STATUS_VALID) {
+                    var isValidTab = validator.isValidContainer($tabPane);
+                    $icon.removeClass('fa-check fa-times')
+                         .addClass(isValidTab ? 'fa-check' : 'fa-times');
+                }
+            }
+        });
+});
+</script>

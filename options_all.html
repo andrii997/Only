@@ -18,16 +18,16 @@
     <div class="container">
         <div class="row">
             <section>
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-10 col-md-offset-1">
                     <div class="page-header">
                         <h2>Tab example</h2>
                     </div>
 
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#info-tab" data-toggle="tab">Informace <i class="fa"></i></a></li>
-                        <li><a href="#name-tab" data-toggle="tab">O.P./Passport<i class="fa"></i></a></li>
+                        <li><a href="#name-tab" data-toggle="tab">Občanský průkaz <i class="fa"></i></a></li>
                         <li><a href="#contact-tab" data-toggle="tab">Kontakty <i class="fa"></i></a></li>
-                        <li><a href="#prava-tab" data-toggle="tab">Prava <i class="fa"></i></a></li>
+                        <li><a href="#prava-tab" data-toggle="tab">Řidičský průkaz <i class="fa"></i></a></li>
                         <li><a href="#document-tab" data-toggle="tab">Document <i class="fa"></i></a></li>
                         <li><a href="#pass-tab" data-toggle="tab">Heslo <i class="fa"></i></a></li>
                     </ul>
@@ -348,7 +348,7 @@
                                 <div class="form-group">
                                   <label class="col-md-2 col-xs-12 control-label"></label>
                                   <div class="col-md-4 col-xs-12">
-                                    <input type="text" class="form-control" name="nomer_pass" placeholder="* № passport" required data-bv-notempty-message="The № passport is required" />
+                                    <input type="text" class="form-control" name="nomer_pass" placeholder="* Číslo O.P." required data-bv-notempty-message="The № passport is required" />
                                   </div>
                                 </div>
 
@@ -370,7 +370,7 @@
                                 <div class="form-group">
                                   <label class="col-md-2 col-xs-12 control-label"></label>
                                   <div class="col-md-8 col-xs-12">
-                                      <input type="text" class="form-control" name="pass_vidan" placeholder="* Ким виданий" required data-bv-notempty-message="The pass_vidan is required" />
+                                      <input type="text" class="form-control" name="pass_vidan" placeholder="* Městský úřad" required data-bv-notempty-message="The pass_vidan is required" />
                                   </div>
                                 </div>
 
@@ -388,7 +388,7 @@
                                 <div class="form-group">
                                     <label class="col-md-2 control-label"></label>
                                     <div class="col-md-4">
-                                        <input type="number" class="form-control" name="mobilePhone" placeholder="* Telefon" 
+                                        <input type="text" class="form-control" name="mobilePhone" placeholder="* Telefon" 
                                                required data-bv-notempty-message="The mobile phone number is required"
                                                data-bv-digits data-bv-digits-message="The mobile phone number is not valid" />
                                     </div>
@@ -401,7 +401,7 @@
                                 <div class="form-group">
                               <label class="col-md-2 control-label"></label>
                               <div class="col-md-4">
-                                  <input type="number" class="form-control" name="homePhone" placeholder="Další telefon" 
+                                  <input type="text" class="form-control" name="homePhone" placeholder="Další telefon" 
                                          data-bv-digits data-bv-digits-message="The home phone number is not valid" />
                               </div>
                                 </div>
@@ -409,7 +409,7 @@
                                 <div class="form-group">
                               <label class="col-md-2 control-label"></label>
                               <div class="col-md-4">
-                                  <input type="number" class="form-control" name="officePhone" placeholder="Další telefon" 
+                                  <input type="text" class="form-control" name="officePhone" placeholder="Další telefon" 
                                          data-bv-digits data-bv-digits-message="The office phone number is not valid" />
                               </div>
                                 </div>
@@ -677,19 +677,38 @@
                             <div class="form-group">
                                 <label class="col-md-2 col-xs-12 control-label"></label>
                                   <div class="col-md-4 col-xs-6">
-                                    <input type="text" class="form-control" name="Issuing" placeholder="* Issuing" required data-bv-notempty-message="The Issuing is required" />
+                                    <input type="text" class="form-control" name="Issuing" placeholder="* Vydavajici uřad " required data-bv-notempty-message="The Issuing is required" />
                                   </div>
                                 <div class="col-md-4 col-xs-6">
-                                  <input type="text" class="form-control" name="License" placeholder="* License number" required data-bv-notempty-message="The License is required" />
+                                  <input type="text" class="form-control" name="License" placeholder="* Série a číslo" required data-bv-notempty-message="The License is required" />
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-2 col-xs-12 control-label"></label>
-                                  <div class="col-md-4 col-xs-6">
-                                    <input type="text" class="form-control" name="Categories" placeholder="* Categorie B,C1" required data-bv-notempty-message="The Categories is required" />
-                                  </div>
+                            <label class="col-md-offset-2 col-md-3">* Udělené (pod)skupiny</label>
+                            <div class="col-md-2">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="categories[]" value="B1" /> B1
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="categories[]" value="B" /> B
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="categories[]" value="C1" /> D1
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="categories[]" value="C" /> BE
+                                    </label>
+                                </div>
                             </div>
+                        </div>
 
                           </div>
 
@@ -697,34 +716,41 @@
                           <div class="tab-pane" id="document-tab">
 
                             <div class="form-group">
-                                <label class="col-lg-4 control-label">File</label>
+                                <label class="col-lg-4 control-label">Přední strana O.P.</label>
                                 <div class="col-lg-7">
                                     <input type="file" class="form-control" name="firstFile" />
-                                    <span class="help-block">Choose a pdf file.</span>
+                                    <span class="help-block">Vyberte soubor PDF o velikosti mezi 1 až 5Mb.</span>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-lg-4 control-label">File with min size</label>
+                                <label class="col-lg-4 control-label">Zadní strana O.P.</label>
                                 <div class="col-lg-7">
                                     <input type="file" class="form-control" name="secondFile" />
-                                    <span class="help-block">Choose a pdf file with a size more than 1M.</span>
+                                    <span class="help-block">Vyberte soubor PDF o velikosti mezi 1 až 5Mb.</span>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-lg-4 control-label">File with max size</label>
+                                <label class="col-lg-4 control-label">Přední strana Ř.P.</label>
                                 <div class="col-lg-7">
                                     <input type="file" class="form-control" name="thirdFile" />
-                                    <span class="help-block">Choose a pdf file with a size less than 10M.</span>
+                                    <span class="help-block">Vyberte soubor PDF o velikosti mezi 1 až 5Mb.</span>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-lg-4 control-label">File with min and max size</label>
+                                <label class="col-lg-4 control-label">Zadní strana Ř.P.</label>
                                 <div class="col-lg-7">
                                     <input type="file" class="form-control" name="fourthFile" />
-                                    <span class="help-block">Choose a pdf file with a size between 1M and 10M.</span>
+                                    <span class="help-block">Vyberte soubor PDF o velikosti mezi 1 až 5Mb.</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-4 control-label">Fotografie s Občanským průkazem v ruce.</label>
+                                <div class="col-lg-7">
+                                    <input type="file" class="form-control" name="fourthFile" />
+                                    <span class="help-block">Vyberte soubor PDF o velikosti mezi 1 až 5Mb.</span>
                                 </div>
                             </div>
                           </div>
@@ -766,6 +792,7 @@
 $(document).ready(function() {
     $('#accountForm')
         .bootstrapValidator({
+          container: 'tooltip',
             excluded: [':disabled'],
             feedbackIcons: {
                 valid: 'glyphicon glyphicon-ok',
@@ -887,14 +914,14 @@ $(document).ready(function() {
                 prava_od: {
                     validators: {
                         notEmpty: {
-                            message: 'The prava_od date is required'
+                            message: 'The prava od date is required'
                         }
                     }
                 },
                 prava_do: {
                     validators: {
                         notEmpty: {
-                            message: 'The prava_do date is required'
+                            message: 'The prava do date is required'
                         }
                     }
                 },
@@ -913,7 +940,14 @@ $(document).ready(function() {
                             message: 'The License must be more than 3'
                         }
                     }
+                },
+                'categories[]': {
+                validators: {
+                    notEmpty: {
+                        message: 'The categories is required'
+                    }
                 }
+            }
             }
         })
         .on('status.field.bv', function(e, data) {
@@ -963,19 +997,16 @@ $(document).ready(function() {
         background: #E7f5D1;
     }
     .input__date::before {
-      content: "* Narození";
+      content: "* Narození.";
       padding-right: 4px;
-      font-weight: bold;
     }
     .input__od::before {
-      content: "* Od";
+      content: "* Od.";
       padding-right: 4px;
-      font-weight: bold;
     }
     .input__do::before {
-      content: "* Do";
+      content: "* Do.";
       padding-right: 4px;
-      font-weight: bold;
     }
     .has-feedback .form-control {
       padding-right: 22px;
