@@ -509,8 +509,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   color: #FFFFFF;
-  padding-top: 10px;
-  padding-left: 25px;
+  padding: 10px 25px;
   text-align: left;
   transform: scale(0) rotate(270deg);
   opacity: 0;
@@ -526,7 +525,11 @@
   height: 2px;
   width: 70px;
   display: block;
-  margin-left: 5px;
+  margin-left: 3px;
+  margin-bottom: 15px;
+}
+.sescr .sescr_btn .btn_pronajm {
+  float: right;
 }
 .img_portfolio:hover .sescr {
   opacity: 1;
