@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" />
+  <title>Peugeot 307</title>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container content__cars">
+		<div class="row">
+			<div class="col-md-5">
+				<img src="img/review_1.jpg" class="img__cars" alt="img">
+			</div>
+			<div class="col-md-7">
+				<div class="col-md-12">
+					<button class="col-md-3 col-xs-5 btn btn-md btn-primary">Pronajmont</button>
+					<button class="col-md-3 col-xs-5 col-xs-offset-1 btn btn-md btn-info">Dohledat vozidlo</button>
+				</div>
+				<div class="col-md-12">
+					<button class="col-md-3 col-xs-5 btn btn-md btn-success disabled retreat_top__cars">Odemknout</button>
+					<button class="col-md-3 col-xs-5 col-xs-offset-1 btn btn-md btn-danger disabled retreat_top__cars">Zamknout</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<style>
+	.content__cars {
+		margin-top: 50px;
+	}
+	.img__cars {
+		width: 300px;
+		max-height: 200px;
+	}
+	.retreat_top__cars {
+		margin-top: 15px;
+	}
+</style>

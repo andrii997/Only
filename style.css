@@ -136,3 +136,13 @@ body {
     color: #999;
     margin-bottom: 10px;
 }*/
+.content__cars {
+    margin-top: 50px;
+}
+.img__cars {
+    width: 300px;
+    max-height: 200px;
+}
+.retreat_top__cars {
+    margin-top: 15px;
+}
